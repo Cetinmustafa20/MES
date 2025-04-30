@@ -1,0 +1,31 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+  }
+  
+  aside h6 {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .list-group-item {
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .list-group-item:hover {
+    background-color: #e6f7ff;
+  }
+  
+  .list-group-item.active {
+    background-color: #cfe2ff;
+    font-weight: bold;
+  }
+  
+  .badge {
+    font-size: 12px;
+  }
+  
