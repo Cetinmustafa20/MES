@@ -87,14 +87,17 @@
     </div>
 
     <!-- Aylık Hedef -->
-    <div class="mt-5">
-      <h5>Aylık Hedef: 100 Üretim</h5>
-      <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar" style="width: <%= hedefYuzde %>%">
-          <%= hedefYuzde %>% Tamamlandı
-        </div>
-      </div>
+<div class="mt-5">
+  <h5>Aylık Hedef: 100 Üretim</h5>
+  <div class="progress">
+    <div class="progress-bar bg-success" role="progressbar" style="width: <%- hedefYuzde %>%">
+      <%- hedefYuzde %>% Tamamlandı
     </div>
+  </div>
+</div>
+
+
+    
 
     <!-- Grafikler -->
     <div class="row mt-5">
@@ -189,10 +192,10 @@
   </div>
 
   <!-- Chart.js Script -->
-  <script>
-    const gunler = <%- JSON.stringify(gunlukVeri.gunler) %>;
-    const sayilar = <%- JSON.stringify(gunlukVeri.sayilar) %>;
-    const makineler = <%- JSON.stringify(makinaVerisi) %>;
+  <script type="text/javascript">
+    const gunler = JSON.parse('<%- JSON.stringify(gunlukVeri.gunler) %>');
+    const sayilar = JSON.parse('<%- JSON.stringify(gunlukVeri.sayilar) %>');
+    const makineler = JSON.parse('<%- JSON.stringify(makinaVerisi) %>');
     const makinaSayilari = {};
     makineler.forEach(m => makinaSayilari[m] = (makinaSayilari[m] || 0) + 1);
 

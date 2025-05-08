@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mesajlaşma Odaları</title>
+  <link rel="stylesheet" href="/styles/mesaj.css">
+</head>
+<body>
+  <h2>Mevcut Odalar</h2>
+  <ul>
+    <% odalar.forEach(oda => { %>
+      <li><a href="/mesajlasma/<%= oda.ad %>"><%= oda.ad %></a></li>
+    <% }) %>
+  </ul>
+
+  <h3>Yeni Oda Oluştur</h3>
+  <form action="/mesaj" method="POST">
+    <input type="text" name="odaAdi" placeholder="Oda adı" required>
+    <button type="submit">Oluştur</button>
+  </form>
+</body>
+</html>
